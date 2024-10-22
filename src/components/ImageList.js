@@ -1,14 +1,12 @@
 import ImageShow from "./ImageShow";
 
+import "./ImageList.css";
+
 function ImageList({ images }) {
   return (
-    <div>
+    <div className="image-list">
       {images.map((image) => (
-        <ImageShow
-          key={image.id}
-          url={image.urls.raw}
-          description={image.description}
-        />
+        <ImageShow key={image.id} image={image} />
       ))}
     </div>
   );
